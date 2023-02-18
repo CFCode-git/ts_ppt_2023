@@ -1,92 +1,362 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+  <title>reveal.js – The HTML Presentation Framework</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-	<body>
+  <style>
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4,
+    .reveal h5,
+    .reveal h6 {
+      text-transform: unset;
+    }
 
-		<div class="reveal">
+    .lh_blue {
+      color: #1b91ff;
+    }
+  </style>
+</head>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<a href="https://revealjs.com">
-						<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
-					</a>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
-					</p>
-				</section>
+<body>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+<div class="reveal">
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#/2/1" class="navigate-down">
-							<img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img class="r-frame" style="background: rgba(255,255,255,0.1); transform: rotate(180deg);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Up arrow">
-						</a>
-					</section>
-				</section>
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+    <section>
+      <h2>TypeScript</h2>
+      <p><small>主讲人：周啟尧</small></p>
+      <p><small>2023/xx/xx</small></p>
+    </section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="https://slides.com" target="_blank">https://slides.com</a>.
-					</p>
-				</section>
+    <section>
+      <h3>本期目录</h3>
+      <ul>
+        <li style="margin-bottom:0.3em;">TypeScript 的必要性</li>
+        <li style="margin-bottom:0.3em;">TypeScript 解决了什么问题</li>
+        <li style="margin-bottom:0.3em;">TypeScript 类型系统浅谈</li>
+        <li>TS 配置与环境搭建</li>
+      </ul>
+    </section>
 
-				<section data-visibility="hidden">
-					<h2>Hidden Slides</h2>
-					<p>
-						This slide is visible in the source, but hidden when the presentation is viewed. You can show all hidden slides by setting the `showHiddenSlides` config option to `true`.
-					</p>
-				</section>
+    <section>
+      <h3>TypeScript 的必要性</h3>
+      <ul>
+        <li>百度指数</li>
+        <li>谷歌趋势</li>
+      </ul>
+      <br>
+    </section>
 
-				<section data-auto-animate>
-					<h2 data-id="code-title">Pretty Code</h2>
-					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+    <section>
+      <section>
+        <h3>TypeScript 解决了什么问题</h3>
+        <p>
+          提供了类型系统，弥补了 JavaScript 在静态类型检查方面的缺陷，能够提前在编译的时候规避许多
+          <a href="#/3/1" class="navigate-down">
+            bug.
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <img class="r-frame" data-src="./images/error_1.png">
+        <img class="r-frame" data-src="./images/error_2.png">
+        <img class="r-frame" data-src="./images/error_3.png">
+      </section>
+
+      <section>
+        <img class="r-frame" style="height:40vh;" data-src="./images/goodJS.jpg">
+      </section>
+    </section>
+
+    <section>
+      <h3 style="text-align:left;">此外..</h3>
+      <ul>
+        <li>类型检查，通过在编译器进行严格的类型检查，可以在编码阶段就可发现可能存在的bug，而不必把它们带到生产环境上。</li>
+        <li>规范的类型编程可以让开发者在写代码的过程中获得良好的代码提示。</li>
+        <li>提供语言拓展，包含了许多特性，比如ES7的装饰器，比如接口和抽象类。</li>
+        <li>可以帮助团队重塑类型思维，便于代码维护和迭代。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>TypeScript 难点</h3>
+      <ul>
+        <li>
+          <p>类型兼容</p>
+        </li>
+        <li>
+          <p>配置<span style="font-size: 0.7em;">(TSConfig, 构建工具链, 开发环境配置等)</span></p>
+        </li>
+      </ul>
+    </section>
+
+    <section data-auto-animate>
+      <h2 data-id="code-title"></h2>
+      <pre data-id="code-animation">
+        <code class="hljs typescript" data-trim data-line-numbers>
+
+          let d:string[] = []
+
+          let f:number[] = []
+
+        </code>
+      </pre>
+      <p><small style="color:#1b91ff;">声明的 string/number 类型的数组, 为什么可以赋值为空数组?</small></p>
+    </section>
+
+    <section style="text-align:left;">
+      <section>
+        <h3 style="text-align:center;">TypeScript 类型系统</h3>
+        <h6 style="text-align:center;">结构化类型系统 / 鸭子类型</h6>
+        <p><small> 鸭子类型的名字来自于鸭子测试，它的核心理念是:如果你看到一只鸟走起来像鸭子，游泳像鸭子，叫得也像鸭子，那么这只鸟就是鸭子。</small></p>
+        <p><small>结构化类型系统在 C#、Python、Object-C 中被广泛使用和支持。</small></p>
+      </section>
+      <section>
+        <p><small> 鸭子类型系统和结构化类型系统并不完全一致，结构化类型系统意味着<span class="lh_blue"> 基于完全的类型结构 </span>来判断类型兼容性，而鸭子类型则只基于<span
+          class="lh_blue">
+          运行时访问的部分</span>
+          来决定。
+        </small></p>
+        <p><small>TypeScript 本身并不是在运行时进行类型检查，官方文档中认为这两个概念是一致的（One of TypeScript’s core principles is that type
+          checking focuses on the shape that values have. This is sometimes called “duck typing” or “structural
+          typing”.）。所以这里我们也可以直接认为鸭子类型与结构化类型是同一概念。 </small></p>
+      </section>
+      <section>
+        <p>
+          除了 <span class="lh_blue">基于类型结构进行兼容性判断的结构化类型系统</span> 以外，还有一种 <span class="lh_blue">基于类型名进行兼容性判断的类型系统</span>
+          ，<span style="font-weight:bold; text-decoration: underline;">标称类型系统</span>。
+        </p>
+        <p>
+          C++、Java、Rust 等语言主要使用标称类型系统。
+        </p>
+      </section>
+    </section>
+
+    <section data-auto-animate>
+      <pre data-id="code-animation">
+        <code class="hljs typescript" data-trim data-line-numbers>
+
+          class Cat {
+            eat() { }
+          }
+
+          class Dog {
+            eat() { }
+          }
+
+          function feedCat(cat: Cat) { }
+
+          feedCat(new Dog())
+
+        </code>
+      </pre>
+      <p><small class="lh_blue">上面的例子在 TypeScript 中不会报错，因为 TypeScript 中比较两个类型并非通过两个类型的名称，而是通过两个类型上实际拥有的属性与方法。</small>
+      </p>
+    </section>
+
+    <section data-auto-animate>
+      <p><small> 如果在 Cat 的属性上添加一个新的方法.... </small></p>
+      <pre data-id="code-animation">
+        <code class="hljs typescript" data-trim data-line-numbers>
+
+        class Cat {
+          eat() { }
+          jump() { }
+        }
+
+        class Dog {
+          eat() { }
+        }
+
+        function feedCat(cat: Cat) { }
+
+        // Error!
+        feedCat(new Dog())
+
+        </code>
+      </pre>
+      <p><small>
+        这时候，`Cat` 类型的属性在 `Dog` 类型上并不完全存在，`Cat` 有其独特的 `jump` 方法，因此 `TypeScript` 认为 `Cat` 和 `Dog` 不能再被视为同一类型
+      </small></p>
+    </section>
+
+    <section data-auto-animate>
+      <p><small> 而如果在 Dog 类型上添加新的方法 </small></p>
+      <pre data-id="code-animation">
+        <code class="hljs typescript" data-trim data-line-numbers>
+
+          class Cat {
+            eat() { }
+          }
+
+          class Dog {
+            eat() { }
+            bite() { }
+          }
+
+          function feedCat(cat: Cat) { }
+
+          feedCat(new Dog())
+
+        </code>
+      </pre>
+      <p><small>
+        TypeScript 一样可以通过类型检测, 原因是 `Dog` 类型完全实现了 `Cat` 类型的方法，而额外的方法可以认为是 `Dog` 类型继承 `Cat` 类型后的独有方法。
+      </small></p>
+    </section>
+
+    <section data-auto-animate>
+      <p><small> TypeScript 在比较对象类型的时候会采用结构化类型系统进行判断，对于结构中的函数类型，也会进行兼容性比较：</small></p>
+      <pre data-id="code-animation">
+        <code class="hljs typescript" data-trim data-line-numbers>
+
+          class Cat {
+            eat():boolean {
+              return true
+            }
+          }
+          class Dog {
+            eat():number {
+              return 100
+            }
+          }
+          function feedCat(cat: Cat) { }
+          // Error!
+          feedCat(new Dog())
+
+        </code>
+      </pre>
+    </section>
+
+    <section data-auto-animate>
+      <section>
+        <h3>标称类型系统</h3>
+        <p><small>要求两个可兼容的类型，其名称必须完全一致。</small></p>
+        <pre data-id="code-animation">
+        <code class="hljs typescript" data-trim data-line-numbers>
+          type USD = number;
+          type CNY = number;
+
+          const CNYCount: CNY = 200;
+          const USDCount: USD = 200;
+
+          function addCNY(source: CNY, input: CNY) {
+            return source + input;
+          }
+          addCNY(CNYCount, USDCount)
+        </code>
+      </pre>
+        <p><small>
+          在 TypeScript(结构化类型系统)中，USD 和 CNY 被认为是完全一样的类型。从变量定义来看，两者属于不同的货币，其代表的实际价值不一样，不应该进行 add 操作。
+        </small></p>
+        <p><small>
+          标称类型系统中，USD 和 CNY 被认为是不同的类型，从而避免了这一情况的发生。
+        </small></p>
+      </section>
+      <section>
+        <p><small>对与结构化类型系统，可以通过类型的结构体现两个类型之间具有父子类型关系，而在标称类型系统中，只能通过显式的继承实现。</small></p>
+        <pre data-id="code-animation">
+          <code class="hljs typescript" data-trim data-line-numbers>
+            class Cat(){}
+
+            class ShortHairCat extends Cat(){}
+          </code>
+         </pre>
+      </section>
+    </section>
+
+
+    <section>
+      <section>
+        <h3>类型层级</h3>
+        <img src="./images/TypePyramid.png" style="width:60vw;">
+        <h3>顶级类型</h3>
+        <h3>底层类型</h3>
+      </section>
+      <section>
+        <pre data-id="code-animation" style="margin-right:8px;">
+          <code class="hljs typescript" data-trim data-line-numbers>
+            // 得到基本类型
+            const b = '1'
+            const c = String('1')
+          </code>
+        </pre>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h3>装箱类型和拆箱类型</h3>
+        <h6>String,Number,Boolean</h6>
+        <div style="display:flex;justify-content: center;align-items: stretch;">
+          <pre data-id="code-animation" style="margin-right:8px;">
+            <code class="hljs typescript" data-trim data-line-numbers>
+              // 得到基本类型
+              const b = '1'
+              const c = String('1')
+            </code>
+          </pre>
+          <pre data-id="code-animation" style="margin-left:8px;">
+            <code class="hljs typescript" data-trim data-line-numbers>
+              // 得到一个实例对象
+              const a = new String('1')
+
+              console.log(typeof a) // object
+              // a instanceof String ...
+            </code>
+          </pre>
+        </div>
+      </section>
+      <section>
+
+      </section>
+
+
+    </section>
+
+    <section>
+      <h3>Object,object 与 {}</h3>
+    </section>
+
+    <section>
+      <h3>类型兼容</h3>
+      <h3>协变 逆变</h3>
+    </section>
+
+    <section data-visibility="hidden">
+      <h2>Hidden Slides</h2>
+      <p>
+        This slide is visible in the source, but hidden when the presentation is viewed. You can show all hidden slides
+        by setting the `showHiddenSlides` config option to `true`.
+      </p>
+    </section>
+
+
+    <section data-auto-animate>
+      <h2 data-id="code-title">Pretty Code</h2>
+      <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
 						import React, { useState } from 'react';
 
 						function Example() {
@@ -97,385 +367,434 @@
 						  );
 						}
 					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>
-				</section>
+      <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>
+    </section>
 
-				<section data-auto-animate>
-					<h2 data-id="code-title">With animations</h2>
-					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
+    <section data-auto-animate>
+      <h2 data-id="code-title">With animations</h2>
+      <pre data-id="code-animation">
+        <code class="hljs javascript" data-trim data-line-numbers="|4,8-11|17|22-24">
+        <script type="text/template">
 						import React, { useState } from 'react';
 
-						function Example() {
-						  const [count, setCount] = useState(0);
+            function Example() {
+            const [count, setCount] = useState(0);
 
-						  return (
-						    <div>
+            return (
+            <div>
 						      <p>You clicked {count} times</p>
 						      <button onClick={() => setCount(count + 1)}>
 						        Click me
-						      </button>
+              </button>
 						    </div>
-						  );
-						}
+            );
+            }
 
-						function SecondExample() {
-						  const [count, setCount] = useState(0);
+            function SecondExample() {
+            const [count, setCount] = useState(0);
 
-						  return (
-						    <div>
+            return (
+            <div>
 						      <p>You clicked {count} times</p>
 						      <button onClick={() => setCount(count + 1)}>
 						        Click me
-						      </button>
+              </button>
 						    </div>
-						  );
-						}
-					</script></code></pre>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in Linux) and click on any element to zoom towards it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to zoom back out.
-					</p>
-					<p>
-						(NOTE: Use ctrl + click in Linux.)
-					</p>
-				</section>
-
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<h2>Auto-Animate</h2>
-					<p>Automatically animate matching elements across slides with <a href="https://revealjs.com/auto-animate/">Auto-Animate</a>.</p>
-					<div class="r-hstack justify-center">
-						<div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-						<div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-						<div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-					</div>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div class="r-hstack justify-center">
-						<div data-id="box1" data-auto-animate-delay="0" style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
-						<div data-id="box2" data-auto-animate-delay="0.1" style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
-						<div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
-					</div>
-					<h2 style="margin-top: 20px;">Auto-Animate</h2>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div class="r-stack">
-						<div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;"></div>
-						<div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;"></div>
-						<div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"></div>
-					</div>
-					<h2 style="margin-top: 20px;">Auto-Animate</h2>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [docs](https://revealjs.com/markdown/).
-
-						```html []
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [docs](https://revealjs.com/markdown/).
-						</section>
-						```
+            );
+            }
 					</script>
-				</section>
+      </code>
+      </pre>
+    </section>
 
-				<section>
-					<p>Add the <code>r-fit-text</code> class to auto-size text</p>
-					<h2 class="r-fit-text">FIT TEXT</h2>
-				</section>
+    <section>
+      <h2>Point of View</h2>
+      <p>
+        Press <strong>ESC</strong> to enter the slide overview.
+      </p>
+      <p>
+        Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in Linux) and click on any element to zoom towards
+        it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to zoom back out.
+      </p>
+      <p>
+        (NOTE: Use ctrl + click in Linux.)
+      </p>
+    </section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+      <h2>Auto-Animate</h2>
+      <p>Automatically animate matching elements across slides with <a href="https://revealjs.com/auto-animate/">Auto-Animate</a>.
+      </p>
+      <div class="r-hstack justify-center">
+        <div data-id="box1"
+             style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+        <div data-id="box2"
+             style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+        <div data-id="box3"
+             style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+      </div>
+    </section>
+    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+      <div class="r-hstack justify-center">
+        <div data-id="box1" data-auto-animate-delay="0"
+             style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
+        <div data-id="box2" data-auto-animate-delay="0.1"
+             style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
+        <div data-id="box3" data-auto-animate-delay="0.2"
+             style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
+      </div>
+      <h2 style="margin-top: 20px;">Auto-Animate</h2>
+    </section>
+    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+      <div class="r-stack">
+        <div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;"></div>
+        <div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;"></div>
+        <div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"></div>
+      </div>
+      <h2 style="margin-top: 20px;">Auto-Animate</h2>
+    </section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p>
-							<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
-							<span style="display: inline-block;" class="fragment fade-up">up, </span>
-							<span style="display: inline-block;" class="fragment fade-down">down, </span>
-							<span style="display: inline-block;" class="fragment fade-left">left</span>
-						</p>
-						<p class="fragment fade-in-then-out">fade-in-then-out</p>
-						<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
-						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
-					</section>
-				</section>
+    <section>
+      <h2>Touch Optimized</h2>
+      <p>
+        Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+      </p>
+    </section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
+    <section data-markdown>
+      <script type="text/template">
+        ## Markdown support
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
+        Write content using inline or external Markdown.
+        Instructions and more info available in the [docs](https://revealjs.com/markdown/).
 
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
-						<h2>Gradient Backgrounds</h2>
-						<pre><code class="hljs html wrap">&lt;section data-background-gradient=
+        ```html []
+        <section data-markdown>
+          ## Markdown support
+
+          Write content using inline or external Markdown.
+          Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+        </section>
+        ```
+      </script>
+    </section>
+
+    <section>
+      <p>Add the <code>r-fit-text</code> class to auto-size text</p>
+      <h2 class="r-fit-text">FIT TEXT</h2>
+    </section>
+
+    <section>
+      <section id="fragments">
+        <h2>Fragments</h2>
+        <p>Hit the next arrow...</p>
+        <p class="fragment">... to step through ...</p>
+        <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span
+          class="fragment">slide.</span></p>
+
+        <aside class="notes">
+          This slide has fragments which are also stepped through in the notes window.
+        </aside>
+      </section>
+      <section>
+        <h2>Fragment Styles</h2>
+        <p>There's different types of fragments, like:</p>
+        <p class="fragment grow">grow</p>
+        <p class="fragment shrink">shrink</p>
+        <p class="fragment fade-out">fade-out</p>
+        <p>
+          <span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+          <span style="display: inline-block;" class="fragment fade-up">up, </span>
+          <span style="display: inline-block;" class="fragment fade-down">down, </span>
+          <span style="display: inline-block;" class="fragment fade-left">left</span>
+        </p>
+        <p class="fragment fade-in-then-out">fade-in-then-out</p>
+        <p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+        <p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span>
+          <span class="fragment highlight-green">green</span></p>
+      </section>
+    </section>
+
+    <section id="transitions">
+      <h2>Transition Styles</h2>
+      <p>
+        You can select from different transitions, like: <br>
+        <a href="?transition=none#/transitions">None</a> -
+        <a href="?transition=fade#/transitions">Fade</a> -
+        <a href="?transition=slide#/transitions">Slide</a> -
+        <a href="?transition=convex#/transitions">Convex</a> -
+        <a href="?transition=concave#/transitions">Concave</a> -
+        <a href="?transition=zoom#/transitions">Zoom</a>
+      </p>
+    </section>
+
+    <section id="themes">
+      <h2>Themes</h2>
+      <p>
+        reveal.js comes with a few themes built in: <br>
+        <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;">Black
+          (default)</a> -
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a>
+        -
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;">League</a>
+        -
+        <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a>
+        -
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;">Beige</a>
+        -
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;">Simple</a>
+        <br>
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;">Serif</a>
+        -
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;">Blood</a>
+        -
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;">Night</a>
+        -
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;">Moon</a>
+        -
+        <a href="#"
+           onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;">Solarized</a>
+      </p>
+    </section>
+
+    <section>
+      <section data-background="#dddddd">
+        <h2>Slide Backgrounds</h2>
+        <p>
+          Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats
+          are supported.
+        </p>
+        <a href="#" class="navigate-down">
+          <img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238"
+               data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
+        </a>
+      </section>
+      <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+        <h2>Gradient Backgrounds</h2>
+        <pre><code class="hljs html wrap">&lt;section data-background-gradient=
 							"linear-gradient(to bottom, #ddd, #191919)"&gt;</code></pre>
-					</section>
-					<section data-background="https://static.slid.es/reveal/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://static.slid.es/reveal/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
+      </section>
+      <section data-background="https://static.slid.es/reveal/image-placeholder.png">
+        <h2>Image Backgrounds</h2>
+        <pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
+      </section>
+      <section data-background="https://static.slid.es/reveal/image-placeholder.png" data-background-repeat="repeat"
+               data-background-size="100px">
+        <h2>Tiled Backgrounds</h2>
+        <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+      </section>
+      <section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+               data-background-color="#000000">
+        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+          <h2>Video Backgrounds</h2>
+          <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+        </div>
+      </section>
+      <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+        <h2>... and GIFs!</h2>
+      </section>
+    </section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs javascript">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
+    <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+      <h2>Background Transitions</h2>
+      <p>
+        Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+      </p>
+      <pre><code class="hljs javascript">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+    </section>
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
+    <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+      <h2>Background Transitions</h2>
+      <p>
+        You can override background transitions per-slide.
+      </p>
+      <pre><code class="hljs html"
+                 style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+    </section>
 
-				<section data-background-iframe="https://hakim.se" data-background-interactive>
-					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-						<h2>Iframe Backgrounds</h2>
-						<p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
-					</div>
-				</section>
+    <section data-background-iframe="https://hakim.se" data-background-interactive>
+      <div
+        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+        <h2>Iframe Backgrounds</h2>
+        <p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the
+          background.</p>
+      </div>
+    </section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+    <section>
+      <h2>Marvelous List</h2>
+      <ul>
+        <li>No order here</li>
+        <li>Or here</li>
+        <li>Or here</li>
+        <li>Or here</li>
+      </ul>
+    </section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+    <section>
+      <h2>Fantastic Ordered List</h2>
+      <ol>
+        <li>One is smaller than...</li>
+        <li>Two is smaller than...</li>
+        <li>Three!</li>
+      </ol>
+    </section>
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
+    <section>
+      <h2>Tabular Tables</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>Item</th>
+          <th>Value</th>
+          <th>Quantity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>$1</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>Lemonade</td>
+          <td>$2</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Bread</td>
+          <td>$3</td>
+          <td>2</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+    <section>
+      <h2>Clever Quotes</h2>
+      <p>
+        These guys come in two forms, inline: <q
+        cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice
+        thing about standards is that there are so many to choose from</q> and block:
+      </p>
+      <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+        &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters
+        would
+        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+      </blockquote>
+    </section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+    <section>
+      <h2>Intergalactic Interconnections</h2>
+      <p>
+        You can link between slides internally,
+        <a href="#/2/3">like this</a>.
+      </p>
+    </section>
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+    <section>
+      <h2>Speaker View</h2>
+      <p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview of the
+        upcoming slide as well as your speaker notes.</p>
+      <p>Press the <em>S</em> key to try it out.</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+      <aside class="notes">
+        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the
+        speaker notes window (hit 's' on your keyboard).
+      </aside>
+    </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an example:</p>
-					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+    <section>
+      <h2>Export to PDF</h2>
+      <p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an example:</p>
+      <iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355"
+              frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+              style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+    </section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+    <section>
+      <h2>Global State</h2>
+      <p>
+        Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+        will be added as a class to the document element when the slide is open. This lets you
+        apply broader style changes, like switching the page background.
+      </p>
+    </section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+    <section data-state="customevent">
+      <h2>State Events</h2>
+      <p>
+        Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+      </p>
+      <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 Reveal.on( 'customevent', function() {
 	console.log( '"customevent" has fired' );
 } );
 					</code></pre>
-				</section>
+    </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+    <section>
+      <h2>Take a Moment</h2>
+      <p>
+        Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take
+        distracting slides off the screen.
+      </p>
+    </section>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://revealjs.com/api/">Extensive JavaScript API</a></li>
-						<li><a href="https://revealjs.com/auto-slide/">Auto-progression</a></li>
-						<li><a href="https://revealjs.com/backgrounds/#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://revealjs.com/keyboard/">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+    <section>
+      <h2>Much more</h2>
+      <ul>
+        <li>Right-to-left support</li>
+        <li><a href="https://revealjs.com/api/">Extensive JavaScript API</a></li>
+        <li><a href="https://revealjs.com/auto-slide/">Auto-progression</a></li>
+        <li><a href="https://revealjs.com/backgrounds/#parallax-background">Parallax backgrounds</a></li>
+        <li><a href="https://revealjs.com/keyboard/">Custom keyboard bindings</a></li>
+      </ul>
+    </section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="https://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+    <section style="text-align: left;">
+      <h1>THE END</h1>
+      <p>
+        - <a href="https://slides.com">Try the online editor</a> <br>
+        - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+      </p>
+    </section>
 
-			</div>
+  </div>
 
-		</div>
+</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/zoom/zoom.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/search/search.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
+<script src="dist/reveal.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
 
-			// Also available as an ES module, see:
-			// https://revealjs.com/initialization/
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				center: true,
-				hash: true,
+  // Also available as an ES module, see:
+  // https://revealjs.com/initialization/
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    center: true,
+    hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-			});
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+  })
 
-		</script>
+</script>
 
-	</body>
+</body>
 </html>
